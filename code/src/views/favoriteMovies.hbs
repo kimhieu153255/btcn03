@@ -1,0 +1,25 @@
+<div id="main" class="card mb-3 border-1 mt-3">
+  <div class="card-header">FAVORITE MOVIES</div>
+  <div class="card-body mx-auto" id="mainBody">
+    {{#each movies}}
+      <div class="card border-1 product mb-1">
+        <div onclick="window.location='/movie/{{id}}'">
+          <div class="wrap mx-auto pt-4">
+            <img class="card-img-top" src="{{img}}" alt="{{id}}" />
+          </div>
+          <div class="card-body text-center">
+            <h4 class="card-title">{{title}}</h4>
+            <p class="card-text">{{year}}</p>
+            <p class="card-text">Rank: {{topRank}}- Rating: {{rating}}</p>
+          </div></div>
+        <input
+          type="submit"
+          class="btn btn-success"
+          onclick="window.location='/user/deleteMovie/{{id}}'"
+          value="eraser"
+        />
+
+      </div>
+    {{/each}}
+  </div>
+</div>

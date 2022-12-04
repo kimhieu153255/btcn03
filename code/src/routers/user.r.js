@@ -1,0 +1,11 @@
+const userC = require("../controllers/user.c");
+const midleW = require("../middleware/authentication");
+const app = require("express");
+const router = app.Router();
+router.get("/movies", userC.favoriteMovies);
+router.get("/add/:id", userC.addMovie);
+router.get("/deleteMovie/:id", userC.deleteMovie);
+router.post("/:login", userC.login);
+router.get("/:login", midleW.isAuth, userC.login);
+router.get("/", midleW.isAuth, userC.load);
+module.exports = router;

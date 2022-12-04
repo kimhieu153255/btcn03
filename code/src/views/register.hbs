@@ -1,0 +1,32 @@
+<div class="w-75 mx-auto border rounded my-3 bg-light">
+  <div class="container mb-3" id="addUser">
+    <form action="/registered" method="POST">
+      <div class="mb-3">
+        <label for="username" class="form-label"> Username</label>
+        <input
+          type="text"
+          name="username"
+          class="form-control"
+          id="username"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">password</label>
+        <input
+          type="password"
+          name="password"
+          class="form-control"
+          id="password"
+          required
+        />
+      </div>
+      <button type="submit" class="d-block btn btn-primary mx-auto">
+        Submit
+      </button>
+      <div class="text-center text-danger d-block">
+        <div class="text-center">{{error}}</div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="w-75 mx-auto border rounded my-3 bg-light">
+  <div class="container mb-3" id="addUser">
+    <form action="/import" enctype="multipart/form-data" method="POST">
+      <div class="mb-3">
+        <label for="nameFile" class="form-label"> Files</label>
+        <input
+          type="file"
+          name="nameFile"
+          class="form-control"
+          id="nameFile"
+          multiple
+        />
+      </div>
+
+      <button type="submit" class="d-block btn btn-primary mx-auto">
+        Submit
+      </button>
+      <div class="text-center text-danger d-block">
+        <div class="text-center">{{error}}</div>
+      </div>
+    </form>
+  </div>
+</div>

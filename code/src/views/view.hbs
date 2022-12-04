@@ -1,0 +1,30 @@
+<div id="main" class="card mb-3 border-1 mt-3">
+  <div class="card border-1 product mb-1">
+    <div>
+      <div class="wrap mx-auto pt-4">
+        <img class="card-img-top" src="{{img}}" alt="{{id}}" />
+      </div>
+      <div class="card-body text-center">
+        <h4 class="card-title">{{title}}</h4>
+        <p class="card-text">"{{year}}"</p>
+        <p class="card-text">Rank: {{topRank}}- Rating: {{rating}}</p>
+        <p class="card-text">{{#each genres}}
+            <a
+              onclick="window.location='/cast/{{this}}'"
+            >{{this}}</a>{{/each}}</p>
+      </div>
+    </div>
+    <input
+      type="submit"
+      class="btn btn-success"
+      onclick="window.location='/user/deleteMovie/{{id}}'"
+      value="eraser"
+    />
+    <input
+      type="submit"
+      class="btn btn-success"
+      onclick="window.location='/user/add/{{id}}'"
+      value="Add"
+    />
+  </div>
+</div>
